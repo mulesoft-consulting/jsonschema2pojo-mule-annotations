@@ -3,7 +3,7 @@
 	<groupId>io.github.mulesoft-consulting</groupId>
 	<artifactId>jsonschema2pojo-mule-annotations</artifactId>
 	<packaging>jar</packaging>
-	<version>1.2.0-SNAPSHOT</version>
+	<version>1.2.0</version>
 	<name>jsonschema2pojo - Mule SDK Annotations Extension</name>
 	<description>Support for Mule (4.x) Java SDK</description>
 	<url>https://github.com/mulesoft-consulting/json-logger</url>
@@ -41,7 +41,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-gpg-plugin</artifactId>
-					<version>1.6</version>
+					<version>1.5</version>
 					<executions>
 						<execution>
 							<id>sign-artifacts</id>
@@ -68,6 +68,30 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
